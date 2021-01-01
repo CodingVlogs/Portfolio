@@ -47,6 +47,15 @@ img {
 .d-block {
     display: block !important;
 }
+.dark-layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
 /* Navigation */
 .navigation a {
     color: rgba(255, 255, 255, 1);
@@ -59,6 +68,21 @@ img {
 }
 .navigation a:hover {
     color: rgba(42, 236, 221, 1);
+}
+/* Buttons */
+.button {
+    color: rgba(255, 255, 255, 1);
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin: 3rem 0 0;
+    max-width: 40rem;
+    padding: 1rem 3rem;
+    text-align: center;
+    text-decoration: none;
+}
+.blue-button {
+    background-color: rgba(26, 245, 238, 1);
 }
 /* Footer */
 .site-footer {
@@ -109,4 +133,35 @@ img {
 }
 .icon-content h3 {
     text-transform: uppercase;
+}
+/* Contact - Index */
+.contact-section {
+    align-items: center;
+    background-image: url(../img/contact-background.jpg);
+    background-position: top center;
+    background-size: cover;
+    height: 40rem;
+    position: relative;
+}
+.contact-content {
+    color: rgba(255, 255, 255, 1);
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+.contact-content p {
+    font-size: 1.8rem;
+}
+.contact-content a {
+    flex: 0;
+}
+/* Blog - Index */
+.blog-container {
+    display: flex;
+    justify-content: space-between;
+}
+.blog-card {
+    flex-basis: calc(50% - 2rem);
+    text-align: center;
 }
