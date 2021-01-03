@@ -170,3 +170,47 @@ img {
     flex-basis: calc(50% - 2rem);
     text-align: center;
 }
+/* Main - About Me */
+.about-me-content {
+    display: grid;
+    grid-column-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+.about-me-image {
+    text-align: center;
+}
+.about-me-image img {
+    border-radius: 5rem;
+    margin: 0 auto;
+    max-height: 50vh;
+}
+.socials-container {
+    display: flex;
+    justify-content: space-between;
+}
+.socials-content {
+    background-color: rgba(238, 238, 238, 1);
+    border-radius: 2.5rem;
+    flex-basis: calc(25% - 2rem);
+    flex-grow: 0;
+    flex-shrink: 0;
+    text-align: center;
+    text-decoration: none;
+}
+.socials-content img {
+    margin: 1rem 0;
+    max-width: 50%;
+    width: 50%;
+}
+.socials-content h3 {
+    color: rgba(0, 0, 0, 1);
+    margin: 0 auto;
+}
+.socials-content p {
+    color: rgba(0, 0, 0, 1);
+    margin-top: 0;
+}
+.latest-video-embed {
+    display: block;
+    margin: 0 auto;
+}

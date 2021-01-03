@@ -12,7 +12,7 @@
         <header class="site-header">
             <div class="container header-content">
                 <div class="header-bar">
-                    <a href="index.html"><img src="img/LogoCV.png" alt="Coding Vlogs Logo"></a> 
+                    <a href="index.html"><img src="img/LogoCV.png" alt="Coding Vlogs Logo"></a>
                     <nav class="navigation">
                         <a target="_self" href="about-me.html">About Me</a>
                         <a target="_self" href="projects.html">Projects</a>
@@ -22,6 +22,65 @@
                 </div>
             </div>
         </header>
+        <main class="container section">
+            <h1 class="fw-300">Get to Know Me</h1>
+            <div class="about-me-content">
+                <div class="about-me-image">
+                    <img src="img/aboutme.jpg" alt="LFtronic">
+                </div>
+                <div class="about-me-text">
+                    <h2 class="">LFtronic</h2>
+                    <p>Hi, I am LFtronic! I'm a robotics college student and a full-time geek. I code since not so long ago but I've found a profound passion in doing so, it's not only part of my daily life but it's what I enjoy doing the most.</p>
+                    <p>CodingVlogs is a project I wanted to do for so long but I was delaying it and making excuses. But it's finally here!!</p>
+                </div>
+            </div>
+        </main>
+        <section class="container section">
+            <h2 class="fw-300">Socials</h2>
+            <div class="socials-container">
+                <a href="https://twitter.com/codingvlogs" class="socials-content">
+                    <img src="img/twitter.png" alt="Twitter Logo">
+                    <h3>Twitter</h3>
+                    <p>@CodingVlogs</p>
+                </a>
+                <a href="https://twitter.com/lftronic" class="socials-content">
+                    <img src="img/twitter.png" alt="Twitter Logo">
+                    <h3>Twitter</h3>
+                    <p>@LFtronic</p>
+                </a>
+                <a href="https://www.instagram.com/codingvlogs/" class="socials-content">
+                    <img src="img/instagram.png" alt="Instagram Logo">
+                    <h3>Instagram</h3>
+                    <p>@CodingVlogs</p>
+                </a>
+                <a href="https://www.instagram.com/lftronic/" class="socials-content">
+                    <img src="img/instagram.png" alt="Instagram Logo">
+                    <h3>Instagram</h3>
+                    <p>@LFtronic</p>
+                </a>
+            </div>
+        </section>
+        <section class="container section">
+            <h2 class="fw-300">The YouTube Channel!</h2>
+            <iframe class="latest-video-embed" vnum='0' cid="UCnzQphJoNkKELtDvtB4VsOA" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+            <script>
+                var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+                function loadVideo(iframe) {
+                    $.getJSON(reqURL + iframe.getAttribute('cid'), function(data) {
+                        var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+                        console.log(videoNumber);
+                        var link = data.items[videoNumber].link;
+                        id = link.substr(link.indexOf("=") + 1);
+                        iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+                    });
+                }
+                var iframes = document.getElementsByClassName('latest-video-embed');
+                for (var i = 0, len = iframes.length; i < len; i++) {
+                    loadVideo(iframes[i]);
+                }
+            </script>
+        </section>
         <footer class="section site-footer">
             <div class="container footer-container">
                 <nav class="navigation">
